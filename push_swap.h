@@ -6,7 +6,7 @@
 /*   By: amatta <amatta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 11:26:35 by amatta            #+#    #+#             */
-/*   Updated: 2023/08/04 15:42:42 by amatta           ###   ########.fr       */
+/*   Updated: 2023/08/07 17:06:32 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,16 @@ void	ft_stackadd_back(t_stack **stack, t_stack *new);
 t_stack	*get_min_value(t_stack **stack);
 void	set_index_from_min(t_stack **stack);
 void	ft_free_stack(t_stack **stack);
+int		stack_is_sorted(t_stack **stack);
+int		ft_stacksize(t_stack **stack);
+void	swap(t_stack **stack);
+void	sa(t_stack **stack_a);
+void	sb(t_stack **stack_b);
+void	ss(t_stack **stack_a, t_stack **stack_b);
+t_stack	*ft_stacklast(t_stack *stack);
+void	rotate(t_stack **stack);
+void	ra(t_stack **stack_a);
+
+
 
 #endif

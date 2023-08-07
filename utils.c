@@ -6,7 +6,7 @@
 /*   By: amatta <amatta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 16:10:58 by amatta            #+#    #+#             */
-/*   Updated: 2023/08/04 17:13:16 by amatta           ###   ########.fr       */
+/*   Updated: 2023/08/07 12:03:29 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,23 @@ void	ft_free_stack(t_stack  **stack)
 		curr = tmp;
 	}
 	free(stack);
+}
+
+int	stack_is_sorted(t_stack **stack)
+{
+	t_stack *curr;
+
+	curr = *stack;
+	while (curr && curr->next)
+	{
+		if(curr->value > curr->next->value)
+		{
+			printf("not sorted\n");
+			return (0);
+		}
+		curr = curr->next;
+	}
+	printf("sorted\n");
+	return (1);
 }
 

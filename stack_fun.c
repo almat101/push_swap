@@ -6,7 +6,7 @@
 /*   By: amatta <amatta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 17:12:08 by amatta            #+#    #+#             */
-/*   Updated: 2023/08/04 17:08:54 by amatta           ###   ########.fr       */
+/*   Updated: 2023/08/07 17:05:02 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,6 @@ void	ft_stackadd_back(t_stack **stack, t_stack *new)
 {
 	t_stack *tmp;
 
-	//if (stack == NULL || new == NULL)
-	//	return ;
 	if (*stack != NULL)
 	{
 		tmp = ft_stacklast(*stack);
@@ -56,5 +54,20 @@ void	ft_stackadd_back(t_stack **stack, t_stack *new)
 		*stack = new;
 		(*stack)->next = NULL;
 	}
+}
+
+int	ft_stacksize(t_stack **stack)
+{
+	t_stack	*curr;
+	int		i;
+
+	i = 0;
+	curr = *stack;
+	while (curr)
+	{
+		i++;
+		curr = curr->next;
+	}
+	return (i);
 }
 
