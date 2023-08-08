@@ -6,7 +6,7 @@
 /*   By: amatta <amatta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 17:12:08 by amatta            #+#    #+#             */
-/*   Updated: 2023/08/07 17:05:02 by amatta           ###   ########.fr       */
+/*   Updated: 2023/08/08 14:13:23 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,3 +71,10 @@ int	ft_stacksize(t_stack **stack)
 	return (i);
 }
 
+void	ft_stackaddfront(t_stack **stack, t_stack *new)
+{
+	if (!new)
+		return;
+	new->next = *stack;
+	(*stack) = new;
+}

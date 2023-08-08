@@ -6,7 +6,7 @@
 #    By: amatta <amatta@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/01 12:43:21 by amatta            #+#    #+#              #
-#    Updated: 2023/08/07 14:16:28 by amatta           ###   ########.fr        #
+#    Updated: 2023/08/08 12:06:12 by amatta           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC = gcc
 
 FLAGS = # -Wall -Wextra -Werror
 
-SRCS =  main.c utils.c checker.c error.c stack_fun.c init_stack.c moves_push.c moves_rotate.c moves_swap.c
+SRCS =  main.c utils.c checker.c error.c stack_fun.c init_stack.c moves_push.c moves_rotate.c moves_swap.c moves_rev_rotate.c
 
 RM = rm -rf
 

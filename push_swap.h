@@ -6,7 +6,7 @@
 /*   By: amatta <amatta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 11:26:35 by amatta            #+#    #+#             */
-/*   Updated: 2023/08/07 17:06:32 by amatta           ###   ########.fr       */
+/*   Updated: 2023/08/08 14:36:40 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,14 @@ void	ss(t_stack **stack_a, t_stack **stack_b);
 t_stack	*ft_stacklast(t_stack *stack);
 void	rotate(t_stack **stack);
 void	ra(t_stack **stack_a);
-
-
-
+void	rb(t_stack **stack_b);
+void	rr(t_stack **stack_a, t_stack **stack_b);
+void	rev_rotate(t_stack **stack);
+void	rra(t_stack **stack_a);
+void	rrb(t_stack **stack_b);
+void	rrr(t_stack **stack_a, t_stack **stack_b);
+void	ft_stackaddfront(t_stack **stack, t_stack *new);
+void	push(t_stack **stack_to, t_stack **stack_from);
+void	pa(t_stack **stack_a, t_stack **stack_b);
+void	pb(t_stack **stack_b, t_stack **stack_a);
 #endif
