@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amatta <amatta@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ale <ale@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/04 11:17:02 by amatta            #+#    #+#             */
-/*   Updated: 2023/08/04 17:12:44 by amatta           ###   ########.fr       */
+/*   Updated: 2023/08/29 23:45:50 by ale              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,6 @@ void	init_stack(t_stack **stack, int argc, char **argv)
 		i = 1;
 		av = argv;
 	}
-	//new_stack = ft_stacknew(ft_atoi(av[i]));
-	//*stack = new_stack;
-	//i++;
 	while (av[i])
 	{
 		new_stack = ft_stacknew(ft_atoi(av[i]));
@@ -46,15 +43,15 @@ void	set_index_from_min(t_stack **stack)
 	int		index;
 
 	index = 0;
-	curr = get_min_value(stack);
+	curr = get_next_min(stack);
 	while (curr)
 	{
 		curr->index = index++;
-		curr = get_min_value(stack);
+		curr = get_next_min(stack);
 	}
 }
 
-t_stack	*get_min_value(t_stack **stack)
+t_stack	*get_next_min(t_stack **stack)
 {
 	t_stack *curr;
 	t_stack *min_stack;

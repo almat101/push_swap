@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: amatta <amatta@student.42.fr>              +#+  +:+       +#+         #
+#    By: ale <ale@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/01 12:43:21 by amatta            #+#    #+#              #
-#    Updated: 2023/08/08 12:06:12 by amatta           ###   ########.fr        #
+#    Updated: 2023/08/30 23:16:45 by ale              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC = gcc
 
 FLAGS = # -Wall -Wextra -Werror
 
-SRCS =  main.c utils.c checker.c error.c stack_fun.c init_stack.c moves_push.c moves_rotate.c moves_swap.c moves_rev_rotate.c
+SRCS =  main.c utils.c checker.c stack_fun.c free_stack.c init_stack.c moves_push.c moves_rotate.c moves_swap.c moves_rev_rotate.c sort_3_num.c sort_345.c radix_sort.c
 
 RM = rm -rf
 

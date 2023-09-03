@@ -1,19 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error.c                                            :+:      :+:    :+:   */
+/*   free_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amatta <amatta@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ale <ale@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 13:06:47 by amatta            #+#    #+#             */
-/*   Updated: 2023/08/03 13:13:57 by amatta           ###   ########.fr       */
+/*   Updated: 2023/08/29 12:22:44 by ale              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	error(char *msg)
+void	ft_free(char **split)
 {
-	ft_printf(msg);
-	exit(1);
+	int	i;
+
+	i = 0;
+	while (split[i])
+		free(split[i++]);
+	free(split);
+}
+
+void	ft_free_stack(t_stack  **stack)
+{
+	t_stack *curr;
+	t_stack *tmp;
+
+	curr = *stack;
+	while (curr != NULL)
+	{
+		tmp = curr->next;
+		free(curr);
+		curr = tmp;
+	}
+	free(stack);
 }

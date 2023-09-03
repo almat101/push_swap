@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amatta <amatta@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ale <ale@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 16:10:58 by amatta            #+#    #+#             */
-/*   Updated: 2023/08/07 12:03:29 by amatta           ###   ########.fr       */
+/*   Updated: 2023/08/30 23:39:48 by ale              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,31 +25,6 @@ void	print_stack(t_stack **stack)
 	ft_printf("NULL\n");
 }
 
-void	ft_free(char **split)
-{
-	int	i;
-
-	i = 0;
-	while (split[i])
-		free(split[i++]);
-	free(split);
-}
-
-void	ft_free_stack(t_stack  **stack)
-{
-	t_stack *curr;
-	t_stack *tmp;
-
-	curr = *stack;
-	while (curr != NULL)
-	{
-		tmp = curr->next;
-		free(curr);
-		curr = tmp;
-	}
-	free(stack);
-}
-
 int	stack_is_sorted(t_stack **stack)
 {
 	t_stack *curr;
@@ -58,13 +33,47 @@ int	stack_is_sorted(t_stack **stack)
 	while (curr && curr->next)
 	{
 		if(curr->value > curr->next->value)
-		{
-			printf("not sorted\n");
 			return (0);
-		}
 		curr = curr->next;
 	}
-	printf("sorted\n");
 	return (1);
 }
 
+int	get_min_val(t_stack **stack, int value)
+{
+	t_stack	*head;
+	int		min_value;
+
+	head = *stack;
+	min_value = head->index;
+	while (head->next)
+	{
+		head = head->next;
+		if ((head->index < min_value) && head->index != value)
+			min_value = head->index;
+	}
+	return (min_value);
+}
+
+int	get_index_distance(t_stack **stack, int index)
+{
+	t_stack	*head;
+	int		dist;
+
+	head = *stack;
+	dist = 0;
+	while (head)
+	{
+		if (head->index == index)
+			break;
+		dist++;
+		head = head->next;
+	}
+	return (dist);
+}
+
+void	error(char *msg)
+{
+	ft_printf(msg);
+	exit(1);
+}
