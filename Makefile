@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ale <ale@student.42.fr>                    +#+  +:+       +#+         #
+#    By: amatta <amatta@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/01 12:43:21 by amatta            #+#    #+#              #
-#    Updated: 2023/08/30 23:16:45 by ale              ###   ########.fr        #
+#    Updated: 2023/09/04 14:57:49 by amatta           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = push_swap
 
 CC = gcc
 
-FLAGS = # -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror
 
 SRCS =  main.c utils.c checker.c stack_fun.c free_stack.c init_stack.c moves_push.c moves_rotate.c moves_swap.c moves_rev_rotate.c sort_3_num.c sort_345.c radix_sort.c
 
@@ -32,7 +32,6 @@ $(NAME) : $(OBJS)
 	make -C libft
 	make -C ft_printf
 	$(CC) $(FLAGS) -o $(NAME) $(OBJS) $(LIBFT) $(FT_PRINTF)
-#-fsanitize=address
 
 clean:
 		make clean -C libft

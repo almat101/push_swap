@@ -6,7 +6,7 @@
 /*   By: amatta <amatta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 15:29:55 by amatta            #+#    #+#             */
-/*   Updated: 2023/09/04 13:45:04 by amatta           ###   ########.fr       */
+/*   Updated: 2023/09/04 15:07:43 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ int	main(int argc, char **argv)
 	*stack_a = NULL;
 	init_stack(stack_a, argc, argv);
 	if (stack_is_sorted(stack_a))
+	{
+		ft_free_stack(stack_a);
 		exit(EXIT_SUCCESS);
+	}
 	stack_b = (t_stack **)malloc(sizeof(t_stack *));
 	*stack_b = NULL;
 	sort(stack_a, stack_b);
