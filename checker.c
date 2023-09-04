@@ -6,7 +6,7 @@
 /*   By: amatta <amatta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 12:06:10 by amatta            #+#    #+#             */
-/*   Updated: 2023/08/04 17:25:10 by amatta           ###   ########.fr       */
+/*   Updated: 2023/09/04 13:30:07 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,10 +82,8 @@ void	args_checker(int argc, char **argv)
 	}
 	while (av[i])
 	{
-		//nbr = ft_atol(av[i]);
 		if (!ft_isnum(av[i]) || !ft_isdup(av) || !ft_limits(av))
 			error("Error\n");
-		//printf("num %s \n",av[i]);
 		i++;
 	}
 	if (argc == 2)

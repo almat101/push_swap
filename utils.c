@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ale <ale@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: amatta <amatta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 16:10:58 by amatta            #+#    #+#             */
-/*   Updated: 2023/08/30 23:39:48 by ale              ###   ########.fr       */
+/*   Updated: 2023/09/04 13:43:52 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	print_stack(t_stack **stack)
 {
-	t_stack *curr;
+	t_stack	*curr;
 
 	curr = *stack;
 	while (curr != NULL)
@@ -27,12 +27,12 @@ void	print_stack(t_stack **stack)
 
 int	stack_is_sorted(t_stack **stack)
 {
-	t_stack *curr;
+	t_stack	*curr;
 
 	curr = *stack;
 	while (curr && curr->next)
 	{
-		if(curr->value > curr->next->value)
+		if (curr->value > curr->next->value)
 			return (0);
 		curr = curr->next;
 	}
@@ -65,7 +65,7 @@ int	get_index_distance(t_stack **stack, int index)
 	while (head)
 	{
 		if (head->index == index)
-			break;
+			break ;
 		dist++;
 		head = head->next;
 	}

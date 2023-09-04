@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ale <ale@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: amatta <amatta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 11:26:35 by amatta            #+#    #+#             */
-/*   Updated: 2023/09/03 17:44:51 by ale              ###   ########.fr       */
+/*   Updated: 2023/09/04 13:41:08 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int		ft_isdup(char **argv);
 int		ft_limits(char **av);
 void	ft_free(char **split);
 t_stack	*ft_stacknew(int value);
-t_stack *ft_stacklast(t_stack *head);
+t_stack	*ft_stacklast(t_stack *head);
 void	ft_stackadd_back(t_stack **stack, t_stack *new);
 t_stack	*get_next_min(t_stack **stack);
 void	set_index_from_min(t_stack **stack);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   radix_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ale <ale@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: amatta <amatta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 23:04:43 by ale               #+#    #+#             */
-/*   Updated: 2023/08/30 23:38:43 by ale              ###   ########.fr       */
+/*   Updated: 2023/09/04 13:29:36 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	get_bits(t_stack **stack)
 
 void	radix_sort(t_stack **stack_a, t_stack **stack_b)
 {
-	t_stack *head_a;
+	t_stack	*head_a;
 	int		i;
 	int		j;
 	int		size;

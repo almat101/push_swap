@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   moves_push.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ale <ale@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: amatta <amatta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 12:18:48 by amatta            #+#    #+#             */
-/*   Updated: 2023/08/29 23:24:50 by ale              ###   ########.fr       */
+/*   Updated: 2023/09/04 13:33:32 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +20,18 @@ void	push(t_stack **stack_to, t_stack **stack_from)
 		return ;
 	tmp = *stack_from;
 	*stack_from = (*stack_from)->next;
-	ft_stackaddfront(stack_to,tmp);
+	ft_stackaddfront(stack_to, tmp);
 	*stack_to = tmp;
 }
 
 void	pa(t_stack **stack_a, t_stack **stack_b)
 {
-		push(stack_a, stack_b);
-		ft_printf("pa\n");
+	push(stack_a, stack_b);
+	ft_printf("pa\n");
 }
 
 void	pb(t_stack **stack_a, t_stack **stack_b)
 {
-	push(stack_b,stack_a);
+	push(stack_b, stack_a);
 	ft_printf("pb\n");
 }

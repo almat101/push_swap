@@ -6,7 +6,7 @@
 /*   By: amatta <amatta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 12:03:38 by amatta            #+#    #+#             */
-/*   Updated: 2023/08/08 13:12:18 by amatta           ###   ########.fr       */
+/*   Updated: 2023/09/04 13:38:14 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	rev_rotate(t_stack **stack)
 {
+	t_stack	*last;
+	t_stack	*prev_last;
+
 	if (ft_stacksize(stack) >= 2)
 	{
-		t_stack *last;
-		t_stack	*prev_last;
-
 		last = ft_stacklast(*stack);
 		prev_last = *stack;
 		while (prev_last->next->next)

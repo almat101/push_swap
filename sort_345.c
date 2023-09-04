@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_345.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ale <ale@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: amatta <amatta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/29 23:15:50 by ale               #+#    #+#             */
-/*   Updated: 2023/08/30 00:00:41 by ale              ###   ########.fr       */
+/*   Updated: 2023/09/04 13:42:14 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ void	sort_4_num(t_stack **stack_a, t_stack **stack_b)
 	if (dist == 1)
 		ra(stack_a);
 	else if (dist == 2)
-		{
-			ra(stack_a);
-			ra(stack_a);
-		}
+	{
+		ra(stack_a);
+		ra(stack_a);
+	}
 	else if (dist == 3)
 		rra(stack_a);
 	if (stack_is_sorted(stack_a))
@@ -40,11 +40,11 @@ void	sort_5_num(t_stack **stack_a, t_stack **stack_b)
 	int	dist;
 
 	if (stack_is_sorted(stack_a))
-		return;
+		return ;
 	dist = get_index_distance(stack_a, get_min_val(stack_a, -1));
 	if (dist == 1)
 		ra(stack_a);
-	else if( dist == 2)
+	else if (dist == 2)
 	{
 		ra(stack_a);
 		ra(stack_a);

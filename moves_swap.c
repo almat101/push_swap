@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   moves_swap.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ale <ale@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: amatta <amatta@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 12:18:56 by amatta            #+#    #+#             */
-/*   Updated: 2023/09/03 17:50:20 by ale              ###   ########.fr       */
+/*   Updated: 2023/09/04 13:40:46 by amatta           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_swap(int *a, int *b)
 {
-	int temp;
+	int	temp;
 
 	temp = *a;
 	*a = *b;
@@ -23,7 +23,7 @@ void	ft_swap(int *a, int *b)
 
 void	swap(t_stack **stack)
 {
-	if(ft_stacksize(stack) >= 2)
+	if (ft_stacksize(stack) >= 2)
 	{
 		ft_swap(&(*stack)->value, &(*stack)->next->value);
 		ft_swap(&(*stack)->index, &(*stack)->next->index);
